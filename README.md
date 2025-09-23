@@ -9,17 +9,15 @@ Objetivo: praticar simplificacao de comandos para economizar tempo em tarefas di
 
 
 
-explicacao de cada termo da funcao de visualizar os processos que mais estao consumindo memoria
+### Explicação do comando `ps -eo pid,comm,%cpu,%mem --sort=-%cpu | head -n 11'
 
-ps- mostra processos ativos no sistema.
--e- seleciona todos os processos em execucao
--o- especifica quais colunas exibir
-pid- id do processo
-comm- comando usado para comecar o processo
-%cpu- uso da cpu em porcentagem
-%mem- uso da memoria em porcentagem
---sort= - ordena a saida 
--%cpu do maior para o menor consumo da cpu
-pipe- pega o resultado do comando ps e passa para o proximo comando
-head- motra apenas as primeiras linhas de saida
--n11 - mostra 11 linhas, 1 e o cabecalho 
+- **ps** → mostra os processos ativos no sistema.
+- **-e** → seleciona todos os processos em execução.
+- **-o** → especifica quais colunas exibir.
+- **pid** → ID do processo.
+- **comm** → comando usado para iniciar o processo.
+- **%cpu** → uso da CPU em porcentagem.
+- **%mem** → uso da memória em porcentagem.
+- **--sort=-%cpu** → ordena do maior para o menor consumo de CPU.
+- **| (pipe)** → pega o resultado do comando `ps` e passa para o próximo comando.
+- **head -n 11** → mostra apenas as primeiras 11 linhas da saída (1 linha de cabeçalho + 10 processos).
